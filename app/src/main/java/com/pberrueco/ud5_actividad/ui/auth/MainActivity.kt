@@ -1,9 +1,10 @@
-package com.pberrueco.ud5_actividad
+package com.pberrueco.ud5_actividad.ui.auth
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.pberrueco.ud5_actividad.databinding.ActivityMainBinding
+import com.pberrueco.ud5_actividad.ui.recycler.HomesActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -16,8 +17,6 @@ class MainActivity : AppCompatActivity() {
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val intent = Intent(this, HomesActivity::class.java)
-        startActivity(intent)
 
     }
 }

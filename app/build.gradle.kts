@@ -3,6 +3,10 @@ import org.jetbrains.kotlin.storage.CacheResetOnProcessCanceled.enabled
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    //safe args
+    id ("androidx.navigation.safeargs")
+    //Kotlin kapt para room
+    id ("kotlin-kapt")
 }
 
 android {
@@ -59,6 +63,16 @@ dependencies {
     implementation ("com.github.bumptech.glide:glide:4.16.0")
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.6")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.6")
+
+    //DataStore
+    implementation ("androidx.datastore:datastore-preferences:1.0.0")
+
+    //Room
+    //runtimeOnly("androidx.room:room-runtime:2.6.1")
+    val room_version = "2.6.1"
+    implementation ("androidx.room:room-runtime:$room_version")
+    kapt ("androidx.room:room-compiler:$room_version")
+    implementation ("androidx.room:room-ktx:$room_version")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

@@ -1,4 +1,4 @@
-package com.pberrueco.ud5_actividad
+package com.pberrueco.ud5_actividad.ui.recycler
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,7 +7,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.pberrueco.ud5_actividad.databinding.ActivityHomesBinding
 import com.pberrueco.ud5_actividad.network.APIManager
-import com.pberrueco.ud5_actividad.network.model.AllGamesResponseItem
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -31,7 +30,8 @@ class HomesActivity : AppCompatActivity() {
 
     private fun getAllGamesFromAPI() {
         lifecycleScope.launch(Dispatchers.IO){
-            val response = APIManager.service.getAllGames()
+            val storeID = 1
+            val response = APIManager.service.getAllGames(storeID)
 
             if(response.isSuccessful){
                 withContext(Dispatchers.Main){

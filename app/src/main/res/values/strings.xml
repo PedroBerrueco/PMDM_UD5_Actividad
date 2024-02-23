@@ -43,4 +43,10 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="title_login">LOGIN</string>
+    <string name="username_login">Username</string>
+    <string name="password_login">password</string>
+    <string name="access_login">LogIn</string>
+    <string name="register_login">SingUp</string>
+    <string name="title_register">SingUp</string>
 </resources>

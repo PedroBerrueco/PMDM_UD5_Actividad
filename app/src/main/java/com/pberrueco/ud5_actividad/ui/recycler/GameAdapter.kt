@@ -1,4 +1,4 @@
-package com.pberrueco.ud5_actividad
+package com.pberrueco.ud5_actividad.ui.recycler
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,11 +6,14 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.pberrueco.ud5_actividad.R
 import com.pberrueco.ud5_actividad.databinding.ItemGameBinding
 import com.pberrueco.ud5_actividad.network.model.AllGamesResponseItem
 
 
-class GameAdapter() : ListAdapter<AllGamesResponseItem, GameAdapter.ItemAdapterViewHolder>(GamesItemCallback)  {
+class GameAdapter() : ListAdapter<AllGamesResponseItem, GameAdapter.ItemAdapterViewHolder>(
+    GamesItemCallback
+)  {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemAdapterViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)

@@ -15,10 +15,10 @@
     android:theme="@style/Theme.UD5_Actividad"
     tools:targetApi="31">
     <activity
-        android:name=".HomesActivity"
+        android:name=".ui.recycler.HomesActivity"
         android:exported="false" />
     <activity
-        android:name=".MainActivity"
+        android:name=".ui.auth.MainActivity"
         android:exported="true">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />

@@ -2,4 +2,7 @@
 plugins {
     id("com.android.application") version "8.1.3" apply false
     id("org.jetbrains.kotlin.android") version "1.9.0" apply false
+
+    //SafeArgs
+    id("androidx.navigation.safeargs.kotlin") version "2.5.3" apply false
 }
